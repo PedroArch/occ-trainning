@@ -1,0 +1,49 @@
+/* ---------------------------------------------------------------------- */
+/*  OE Generic Widget Styles                                              */
+/* ---------------------------------------------------------------------- */
+#oeAssignment1OurBrandsKeith {
+    background-color: black;
+    color: #fff;
+    padding: 10px 0 50px 0px;
+
+    .container{
+        width: 80%;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+      }
+      
+      .brandWrapper{
+        background-color: #fff;
+        border-radius: 3px 3px 3px 3px;
+        width: 25%;
+        margin: 5px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 30px;
+
+        img{
+            width: 75%;
+        }
+      }
+
+      h2{
+        font-weight: bold;
+        span{
+            font-weight: normal;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .flex-container {
+            flex-direction: column;
+          }
+          
+          .brandWrapper{
+            width: 100%;
+          }
+      }
+}   
