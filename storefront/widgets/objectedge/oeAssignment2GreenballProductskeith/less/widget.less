@@ -1,0 +1,105 @@
+/* ---------------------------------------------------------------------- */
+/*  OE Generic Widget Styles
+/* ---------------------------------------------------------------------- */
+#oeES6Widget {
+
+    @keyframes zoomBg {
+        from {background-size: 100%}
+        to {background-size: 130%}
+      }
+
+    .assignment2-container {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .header{
+        width: 75%;
+        padding: 50px 0 60px 0;
+        color: black;
+
+        div{
+            padding: 0 20px 0 20px;
+        }
+
+        span{
+            font-weight: bolder;   
+        }
+
+        .brand-logo{
+            font-size: 1.8em;
+            padding: 10px;
+        }
+
+        .brand-description{
+            border-left: 1px solid #e8e8e8;
+            font-size: 0.9em;
+        }
+    }
+
+    .menu-wrapper {        
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+
+        div {
+            background-color: black;
+            width: 25%;
+            line-height: 180px;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bolder;
+            cursor: pointer;            
+        }        
+    }
+
+    .bg-image{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+        &:hover {            
+              animation-name: zoomBg;
+              animation-duration: 0.7s;
+              background-size: 130%
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .menu-wrapper {                         
+            div {
+                line-height: 150px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .menu-wrapper {    
+            div {
+                line-height: 200px;
+                width: 50%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .menu-wrapper {    
+            div {
+                line-height: 180px;;
+                width: 50%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .menu-wrapper {    
+            div {
+                line-height: 140px;
+                width: 50%;
+            }
+        }
+    }
+}

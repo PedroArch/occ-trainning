@@ -1,0 +1,13 @@
+{
+  "name": "oeAssignment2GreenballProductskeith",
+  "widgetType": "oeAssignment2GreenballProductskeith",
+  "i18nresources": "oeAssignment2GreenballProductskeith",
+  "javascript": "oeAssignment2GreenballProductskeith",
+  "availableToAllPages": true,
+  "global": false,
+  "globalEnabled": false,
+  "version": 1,
+  "jsEditable": true,
+  "imports": [],
+  "config": {}
+}
