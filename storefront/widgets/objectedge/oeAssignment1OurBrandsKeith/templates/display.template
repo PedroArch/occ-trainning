@@ -3,34 +3,13 @@
     <div class="container">
         <h2>OUR <span>BRANDS</span></h2>
     </div>
-    <div class="flex-container container">
+    <div class="flex-container container" data-bind="foreach: brands">
         <div class="brandWrapper">
             <img data-bind="ccResizeImage: {
-                source: '/file/collections/centennial.png',
+                source: '/file/' + image,
                 alt:'Antique Wood Chair',
                 errorSrc:'images/noImage.png',
                 errorAlt:'No Image Found'}" />
-        </div>
-        <div class="brandWrapper">
-            <img data-bind="ccResizeImage: {
-                source: '/file/collections/gbc-logo.jpg',
-                alt:'Antique Wood Chair',
-                errorSrc:'images/noImage.png',
-                errorAlt:'No Image Found'}" />
-        </div>
-        <div class="brandWrapper">
-            <img data-bind="ccResizeImage: {
-                source: '/file/collections/GB_Logo.PNG',
-                alt:'Antique Wood Chair',
-                errorSrc:'images/noImage.png',
-                errorAlt:'No Image Found'}" />
-        </div>
-        <div class="brandWrapper">
-            <img data-bind="ccResizeImage: {
-                source: '/file/collections/kanati.png',
-                alt:'Antique Wood Chair',
-                errorSrc:'images/noImage.png',
-                errorAlt:'No Image Found'}" />
-        </div>        
+        </div>      
     </div>
 </div>

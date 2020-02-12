@@ -1,119 +1,78 @@
 /**
- * @fileoverview oeWidget
+ * @fileoverview oeAssignment1OurBrandsKeith.
  *
- * @author maximiliano.porta@objectedge.com
+ * @author keith.sarate@objectedge.com
  */
 define(
   //-------------------------------------------------------------------
   // DEPENDENCIES
   //-------------------------------------------------------------------
-  ['./widgetGeneric.js', './widgetSpecific.js'],
+  ['knockout', 'ccLogger', 'ccRestClient'],
+
   //-------------------------------------------------------------------
-  // WIDGET DEFINITION
+  // MODULE DEFINITION
   //-------------------------------------------------------------------
-  function (generic, specific) {
-    'use strict';
+  function (ko, ccLogger, ccRestClient) {
 
-    // Object that will contains the final structure of the widget
-    var widget = {};
+    "use strict";
 
-    /**
-     * [
-     *  For every dependence, runs the callback if the
-     *  dependence 'i' is different of 'generic' and 'ignore'
-     * ]
-     * @param  {Array}    dependence  [array of all widget dependencies]
-     * @param  {Function} callback    [function executed using the dependence 'i']
-     * @param  {???}      ignore      [instance of one dependence]
-     * @return void
-     */
-    function loadDependencies(dependence, callback, ignore) {
-      if (!callback || callback.constructor !== Function) {
-        throw new Error('The callback must be a function!');
-      }
+    const collectionIds = [
+      'keith_centenial',
+      'keith_gbc',
+      'keith_greenball',
+      'keith_kanat'
+    ]
 
-      $.each(dependence, function(i, value) {
-        if(value !== generic && value !== ignore) {
-         callback(value);
-        }
-      });
+    //CLASS
+    function brand(title, image) {
+
+      this.title = title || '';
+      this.image = image;
+
+      return this;
     }
 
-    /**
-     * [
-     *  Add to the widget's final object all dependencies attributes
-     *  and methods that's does not contains the prefix '__OE__'
-     * ]
-     * @param  {???} model [instance of one dependence]
-     * @return void
-     */
-    function inject(dependence) {
-      $.each(dependence, function(i, value) {
-        if (i.indexOf('__OE__') < 0) {
-          widget[i] = value;
+    function getCollection(id, callback) {
+
+      ccRestClient.request('/ccstore/v1/collections/' + id,
+        {},
+        callback.bind(this),
+        function (error) {
+          //callback(null, error);
+          ccLogger.error('Error trying to fretch product information:', error);
         }
-      });
+      );
     }
 
-    /**
-     * [
-     *  Set all widget dependencies in the right order.
-     *  Generic is removed and Specific always will be the last dependence.
-     *  Set the generic __run method
-     * ]
-     * @param  {Object} dependencies  [widget arguments]
-     * @return void
-     */
-    (function(dependencies) {
-      var dependence = [];
-
-      $.each(dependencies, function(i, value) {
-        if (value !== generic) {
-          dependence.push(value);
-        }
-      });
-
-      dependence = dependence.sort(function(a) { return (a === specific) ? 1 : 0; });
-
-      generic.__dependence = dependence.slice();
+    return {
 
       /**
-       * [
-       *  Controls the call of 'onLoad' and 'beforeAppear' for all dependencies
-       * ]
-       * @param  {String} method [the method name]
-       * @param  {Object} data   [The object passed to the method ('widget' or 'page')]
-       * @return void
+       * This function will run just on time when the widget was loaded the first time
        */
-      generic.__run = function (method, data) {
-        var widget = this;
 
-        $.each(widget.__dependence, function(i, value) {
-          if(!value['__OE__' + method] || value['__OE__' + method].constructor !== Function) {
-            throw new Error('The ' + value.constructor + ' does not have a method ' + '__OE__' + method);
-          }
+      onLoad: function (widget) {
 
-          value['__OE__' + method](data);
+        ccLogger.info("[OE][onLoad] Loading oeAssignment1OurBrandsKeith");
+
+        widget.brands = ko.observableArray();
+
+        collectionIds.map(function (id) {
+
+          getCollection(id, function(collection){
+
+            widget.brands.push(new brand(collection.displayName,
+                                         collection.categoryImages[0].path));
+          });
         });
-      };
-    })(arguments);
 
-    // Set the Generic reference as a parent for all dependencies
-    loadDependencies(arguments, function(dependence) {
-      dependence.__parent = generic;
-    });
+      },
 
-    // Add generic attributes and methods
-    inject(generic);
+      /**
+       * This function will run whe the widget was loaded and every page change
+       */
+      beforeAppear: function (page) {
 
-    // Add attributes and methods of the other dependencies
-    loadDependencies(arguments, function(dependence) {
-      inject(dependence);
-    }, specific);
-
-    // Add specific attributes and methods
-    inject(specific);
-
-    return widget;
+      }
+    };
   }
 );
