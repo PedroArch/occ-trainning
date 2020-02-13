@@ -1,0 +1,15 @@
+<!-- oeAssignment1OurBrandsKeith -->
+<div id="oeAssignment1OurBrandsKeith">
+    <div class="container">
+        <h2>OUR <span>BRANDS</span></h2>
+    </div>
+    <div class="flex-container container" data-bind="foreach: brands">
+        <div class="brandWrapper">
+            <img data-bind="ccResizeImage: {
+                source: '/file/' + image,
+                alt:'Antique Wood Chair',
+                errorSrc:'images/noImage.png',
+                errorAlt:'No Image Found'}" />
+        </div>      
+    </div>
+</div>

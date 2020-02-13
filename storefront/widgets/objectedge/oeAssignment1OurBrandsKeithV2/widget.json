@@ -1,0 +1,13 @@
+{
+  "name": "oeAssignment1OurBrandsKeithV2",
+  "widgetType": "oeAssignment1OurBrandsKeithV2",
+  "i18nresources": "oeAssignment1OurBrandsKeithV2",
+  "javascript": "oeAssignment1OurBrandsKeithV2",
+  "availableToAllPages": true,
+  "global": false,
+  "globalEnabled": false,
+  "version": 1,
+  "jsEditable": true,
+  "imports": [],
+  "config": {}
+}
