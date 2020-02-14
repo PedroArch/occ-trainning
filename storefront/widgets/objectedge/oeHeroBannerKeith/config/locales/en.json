@@ -1,0 +1,61 @@
+{
+  "resources": {
+    "helpTextTimeSwitchImage": "Banner transition time in seconds",
+    "labelTimeSwitchImage": "Banner transition time",
+
+    "labelAutoplayCarousel": "Autoplay",
+    "helpTextAutoplayCarousel": "",
+
+    "labelLoopCarousel": "Loop",
+    "helpTextLoopCarousel": "Specifies whether the carousel should go through all slides continuously, or stop at the last slide", 
+
+    "banner1_labelImageUrl": "Banner 1 - Image",
+    "banner1_labelImageUrlMobile": "Banner 1 - Mobile image",
+    "banner1_labelBannerLink": "Banner 1 - Link",
+    "banner1_labelStartDate": "Banner 1 - Start date",
+    "banner1_labelEndDate": "Banner 1 - End date",
+    "banner1_labelBannerText": "Banner 1 - Text",
+
+    "banner2_labelImageUrl": "Banner 2 - Image",
+    "banner2_labelImageUrlMobile": "Banner 2 - Mobile image",
+    "banner2_labelBannerLink": "Banner 2 - Link",
+    "banner2_labelStartDate": "Banner 2 - Start date",
+    "banner2_labelEndDate": "Banner 2 - End date",
+    "banner2_labelBannerText": "Banner 2 - Text",
+    
+    "banner3_labelImageUrl": "Banner 3 - Image",
+    "banner3_labelImageUrlMobile": "Banner 3 - Mobile image",
+    "banner3_labelBannerLink": "Banner 3 - Link",
+    "banner3_labelStartDate": "Banner 3 - Start date",
+    "banner3_labelEndDate": "Banner 3 - End date",
+    "banner3_labelBannerText": "Banner 3 - Text",
+
+    "banner4_labelImageUrl": "Banner 4 - Image",
+    "banner4_labelImageUrlMobile": "Banner 4 - Mobile image",
+    "banner4_labelBannerLink": "Banner 4 - Link",
+    "banner4_labelStartDate": "Banner 4 - Start date",
+    "banner4_labelEndDate": "Banner 4 - End date",
+    "banner4_labelBannerText": "Banner 4 - Text",
+
+    "banner5_labelImageUrl": "Banner 5 - Image",
+    "banner5_labelImageUrlMobile": "Banner 5 - Mobile image",
+    "banner5_labelBannerLink": "Banner 5 - Link",
+    "banner5_labelStartDate": "Banner 5 - Start date",
+    "banner5_labelEndDate": "Banner 5 - End date",
+    "banner5_labelBannerText": "Banner 5 - Text",
+
+    "banner6_labelImageUrl": "Banner 6 - Image",
+    "banner6_labelImageUrlMobile": "Banner 6 - Mobile image",
+    "banner6_labelBannerLink": "Banner 6 - Link",
+    "banner6_labelStartDate": "Banner 6 - Start date",
+    "banner6_labelEndDate": "Banner 6 - End date",
+    "banner6_labelBannerText": "Banner 6 - Text",
+    
+    "helpTextImageUrl": "Insert the URL from the image",
+    "helpTextImageUrlMobile": "Insert the URL from the image for mobile device",    
+    "helpTextBannerLink": "Link",   
+    "helpTextStartDate": "IBanner display start",    
+    "helpTextEndDate": "Banner display end",
+    "helpTextBannerText": "Text"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "oeHeroBannerKeith",
+  "widgetType": "oeHeroBannerKeith",
+  "i18nresources": "oeHeroBannerKeith",
+  "javascript": "oeHeroBannerKeith",
+  "availableToAllPages": true,
+  "global": false,
+  "globalEnabled": false,
+  "version": 1,
+  "jsEditable": true,
+  "imports": [],
+  "config": {}
+}
