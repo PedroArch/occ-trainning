@@ -16,7 +16,7 @@
     <div data-bind="foreach: menuList" 
          class="assignment2-container menu-wrapper">
         <div class="bg-image" 
-             data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }, click: goToPage.bind(url)">
+             data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }, click: goToPage.bind($data, url)">
             <span data-bind="text: title">trailer</span>
         </div>
     </div>
