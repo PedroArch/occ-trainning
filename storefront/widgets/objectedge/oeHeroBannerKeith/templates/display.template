@@ -1,6 +1,6 @@
 <!-- oeES6Widget -->
 <div id="oeHeroBannerKeith">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-bind="attr: { 'data-wrap': config().boolLoopCarousel, 'data-interval': config().timeSwitchImage, 'data-ride': config().boolAutoplayCarousel ? 'carousel' : false }">
         <!-- Indicators -->
         <ol class="carousel-indicators" data-bind="foreach: banners">
             <li data-target="#myCarousel" data-bind="attr: { 'data-slide-to': $index() }, css: {active: $index() == 0}">

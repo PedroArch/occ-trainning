@@ -9,6 +9,7 @@ import { BaseWidget } from 'occ-components/widget-core';
  */
 import $ from 'jquery';
 import ko from 'knockout';
+import moment from 'moment';
 
 /**
  * Models
@@ -21,7 +22,7 @@ export class OeHeroBannerKeith extends BaseWidget {
   config = ko.observable();
 
   @exportToViewModel
-  banners = ko.observableArray(); 
+  banners = ko.observableArray();
 
   /**
    * On load view model
@@ -30,9 +31,9 @@ export class OeHeroBannerKeith extends BaseWidget {
     //Constructing the BaseWidget
     super();
 
-    this.config = this.getConfig();
+    this.config(this.getConfig());
     this.getBanners();
-
+    
     $("#myCarousel").carousel()
   }
 
@@ -44,26 +45,49 @@ export class OeHeroBannerKeith extends BaseWidget {
 
     for (let i = 0; i < 6; i++) {
       if (this.$data.hasOwnProperty('banner' + i + '_imageUrl') && this.$data['banner' + i + '_imageUrl']() != "") {
-        this.banners.push(new Banner(
+
+        var bannerToAdd = new Banner(
           '/file/' + this.$data['banner' + i + '_imageUrl'](),
           '/file/' + this.$data['banner' + i + '_imageUrlMobile'](),
           this.$data['banner' + i + '_Link'](),
-          this.$data['banner' + i + '_startDate'](),
-          this.$data['banner' + i + '_endDate'](),
+          this.getDate(this.$data['banner' + i + '_startDate']()),
+          this.getDate(this.$data['banner' + i + '_endDate']()),
           this.$data['banner' + i + '_text'](),
-        ));
+        );
+
+        if ((!bannerToAdd.startDate && !bannerToAdd.endDate) 
+             || moment(new Date()).isBetween(bannerToAdd.startDate, bannerToAdd.endDate)
+             || (!bannerToAdd.startDate && moment(new Date()).isSameOrBefore(bannerToAdd.endDate)) 
+             || (!bannerToAdd.endDate && moment(new Date()).isSameOrAfter(bannerToAdd.startDate))
+             ) {
+          this.banners.push(bannerToAdd);
+        }
+
+
       }
     }
   }
 
   getConfig() {
+
     var config = {
-      timeSwitchImage: this.$data.hasOwnProperty('timeSwitchImage') && this.$data['timeSwitchImage']() && !isNaN(this.$data['timeSwitchImage']()) ? parseInt(this.$data['timeSwitchImage']()) * 1000 : 4000,
+      timeSwitchImage: parseInt(this.$data['timeSwitchImage']()) * 1000,
       boolLoopCarousel: this.$data.hasOwnProperty('boolLoopCarousel') ? this.$data['boolLoopCarousel']() : false,
       boolAutoplayCarousel: this.$data.hasOwnProperty('boolAutoplayCarousel') ? this.$data['boolAutoplayCarousel']() : false
     };
 
     return config
-  } 
+  }
+
+  getDate(date) {
+    if (date)
+    {
+      var splitDate = date.split('/')
+
+      return new Date(splitDate[1] + '/' + splitDate[0] + '/' + splitDate[2]);
+    }      
+    else
+      return date;
+  }
 }
 
