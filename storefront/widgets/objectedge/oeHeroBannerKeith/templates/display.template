@@ -1,6 +1,7 @@
 <!-- oeES6Widget -->
 <div id="oeHeroBannerKeith">
-    <div id="myCarousel" class="carousel slide" data-bind="attr: { 'data-wrap': config().boolLoopCarousel, 'data-interval': config().timeSwitchImage, 'data-ride': config().boolAutoplayCarousel ? 'carousel' : false }">
+    <div id="myCarousel" class="carousel slide"
+        data-bind="attr: { 'data-wrap': config().boolLoopCarousel, 'data-interval': config().timeSwitchImage, 'data-ride': config().boolAutoplayCarousel ? 'carousel' : false }">
         <!-- Indicators -->
         <ol class="carousel-indicators" data-bind="foreach: banners">
             <li data-target="#myCarousel" data-bind="attr: { 'data-slide-to': $index() }, css: {active: $index() == 0}">
@@ -10,7 +11,13 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" data-bind="foreach: banners">
             <div class="item active" data-bind="css: {active: $index() == 0}, click: goToPage.bind($data, bannerLink)">
-                <img data-bind="attr: { 'src': imageUrl }" alt="">
+                <img data-bind="if: true,
+                    ccResizeImage: {
+                    source: imageUrl,
+                    alt:bannerText,
+                    errorSrc:'images/noImage.png',
+                    errorAlt:'No Image Found'}" />
+
                 <div class="carousel-caption">
                     <p data-bind="text: bannerText"></p>
                 </div>

@@ -3,13 +3,11 @@ import rest from 'ccRestClient';
 
 export default class Banner {
     constructor(imageUrl,
-        mobileImageUrl,
         bannerLink,
         startDate,
         endDate,
         bannerText) {
         this.imageUrl = imageUrl || '';
-        this.mobileImageUrl = mobileImageUrl || '';
         this.bannerLink = bannerLink || '';
         this.startDate = startDate;
         this.endDate = endDate;

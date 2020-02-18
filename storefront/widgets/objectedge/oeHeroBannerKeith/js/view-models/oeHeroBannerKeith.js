@@ -24,6 +24,9 @@ export class OeHeroBannerKeith extends BaseWidget {
   @exportToViewModel
   banners = ko.observableArray();
 
+  @exportToViewModel
+  isMobile = ko.observable();
+
   /**
    * On load view model
    */
@@ -31,9 +34,11 @@ export class OeHeroBannerKeith extends BaseWidget {
     //Constructing the BaseWidget
     super();
 
+    this.isMobile(this.$data.isPhone() || this.$data.isTablet());
+
     this.config(this.getConfig());
     this.getBanners();
-    
+
     $("#myCarousel").carousel()
   }
 
@@ -47,23 +52,20 @@ export class OeHeroBannerKeith extends BaseWidget {
       if (this.$data.hasOwnProperty('banner' + i + '_imageUrl') && this.$data['banner' + i + '_imageUrl']() != "") {
 
         var bannerToAdd = new Banner(
-          '/file/' + this.$data['banner' + i + '_imageUrl'](),
-          '/file/' + this.$data['banner' + i + '_imageUrlMobile'](),
+          this.isMobile() ?  '/file/' + this.$data['banner' + i + '_imageUrlMobile']() : '/file/' + this.$data['banner' + i + '_imageUrl'](),
           this.$data['banner' + i + '_Link'](),
           this.getDate(this.$data['banner' + i + '_startDate']()),
           this.getDate(this.$data['banner' + i + '_endDate']()),
           this.$data['banner' + i + '_text'](),
         );
 
-        if ((!bannerToAdd.startDate && !bannerToAdd.endDate) 
-             || moment(new Date()).isBetween(bannerToAdd.startDate, bannerToAdd.endDate)
-             || (!bannerToAdd.startDate && moment(new Date()).isSameOrBefore(bannerToAdd.endDate)) 
-             || (!bannerToAdd.endDate && moment(new Date()).isSameOrAfter(bannerToAdd.startDate))
-             ) {
+        if ((!bannerToAdd.startDate && !bannerToAdd.endDate)
+          || moment(new Date()).isBetween(bannerToAdd.startDate, bannerToAdd.endDate)
+          || (!bannerToAdd.startDate && moment(new Date()).isSameOrBefore(bannerToAdd.endDate))
+          || (!bannerToAdd.endDate && moment(new Date()).isSameOrAfter(bannerToAdd.startDate))
+        ) {
           this.banners.push(bannerToAdd);
         }
-
-
       }
     }
   }
@@ -80,12 +82,11 @@ export class OeHeroBannerKeith extends BaseWidget {
   }
 
   getDate(date) {
-    if (date)
-    {
+    if (date) {
       var splitDate = date.split('/')
 
       return new Date(splitDate[1] + '/' + splitDate[0] + '/' + splitDate[2]);
-    }      
+    }
     else
       return date;
   }
