@@ -1,0 +1,53 @@
+<!-- oeES6Widget -->
+<div id="oeES6Widget">
+
+  <!--slider start-->
+  <div class="slider">
+    <div class="slides">
+      <!--radio buttons start-->
+       <!-- ko foreach: banners -->
+      <input type="radio" name="radio-btn" data-bind="attr: {id: 'radio' + id}"> 
+       <!--/ko -->
+      <!--radio buttons end-->
+
+    
+    <!--slide images start-->
+    <!-- ko foreach: banners -->
+      <div class="slide" data-bind="css: { first: id < 2}">
+        <div class='bg-image' data-bind="style: { backgroundImage: 'url(\'' + imageUrl + '\')' }">
+      <!-- ko if: bannerText != ''-->
+          <div class="text-box">
+            <span data-bind="text: bannerText">
+            </span>
+          </div>
+      <!-- /ko -->
+          <!-- ko if: hasCTA && CTAText != ''-->
+          <a type="button" data-bind="text: CTAText, attr: {href: CTALink}"></a>
+          <!-- /ko -->
+        </div>
+      </div>
+    <!--/ko -->
+    <!--slide images end-->
+
+      <!--automatic navigation start-->
+      <div class="navigation-auto">
+      <!-- ko foreach: banners -->
+        <div data-bind="attr: { class: 'auto-btn' + id }"></div>
+      <!-- /ko -->
+      </div>
+      <!--automatic navigation end-->
+
+    </div>
+
+    <!--manual navigation start -->
+    <div class="navigation-manual">
+     <!-- ko foreach: banners -->
+      <label data-bind="attr: { for: 'radio' + id }" class="manual-btn"></label>
+    <!-- /ko -->
+    </div>
+    <!--manual navagation end-->
+  </div>
+  <!-- slider end-->
+
+</div>
+

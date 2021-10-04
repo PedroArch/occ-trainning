@@ -1,0 +1,35 @@
+{
+    "widgetDescriptorName": "oeAssignment10AppLevelPedro",
+    "properties": [
+        {
+            "id": "brandsPicked",
+            "name": "brandsToShow", 
+            "type": "multiSelectOptionType",
+            "helpTextResourceId": "brandsPickedHelpText",
+            "labelResourceId": "brandsPickedLabel",
+            "defaultValue": "pedro_centenial",
+            "displayAsCheckboxes": true,
+            "options": [
+                {
+                    "id": "pedro_centenialId",
+                    "value": "pedro_centenial",
+                    "labelResourceId": "pedroCentenialLabel"
+                },                 {
+                    "id": "pedro_gbcId",
+                    "value": "pedro_gbc",
+                    "labelResourceId": "pedroGbcLabel"
+                },
+                {
+                    "id": "pedro_greenballId",
+                    "value": "pedro_greenball",
+                    "labelResourceId": "pedroGreenballLabel"
+                },
+                {
+                    "id": "pedro_kanatiId",
+                    "value": "pedro_kanat",
+                    "labelResourceId": "pedroKanatiLabel"
+                }
+            ]
+        }
+    ]
+}

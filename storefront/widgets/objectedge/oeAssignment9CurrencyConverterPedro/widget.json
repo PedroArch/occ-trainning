@@ -1,0 +1,13 @@
+{
+  "name": "oeAssignment9CurrencyConverterPedro",
+  "widgetType": "oeAssignment9CurrencyConverterPedro",
+  "i18nresources": "oeAssignment9CurrencyConverterPedro",
+  "javascript": "oeAssignment9CurrencyConverterPedro",
+  "availableToAllPages": true,
+  "global": false,
+  "globalEnabled": false,
+  "version": 1,
+  "jsEditable": true,
+  "imports": [],
+  "config": {}
+}

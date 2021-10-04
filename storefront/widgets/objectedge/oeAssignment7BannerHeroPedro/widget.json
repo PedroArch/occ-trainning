@@ -1,0 +1,13 @@
+{
+  "name": "oeAssignment7BannerHeroPedro",
+  "widgetType": "oeAssignment7BannerHeroPedro",
+  "i18nresources": "oeAssignment7BannerHeroPedro",
+  "javascript": "oeAssignment7BannerHeroPedro",
+  "availableToAllPages": true,
+  "global": false,
+  "globalEnabled": false,
+  "version": 1,
+  "jsEditable": true,
+  "imports": [],
+  "config": {}
+}

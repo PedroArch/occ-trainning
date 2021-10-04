@@ -1,0 +1,27 @@
+{
+  "availableToAllWidgets": false,
+  "configOptions": [
+    "textBox"
+  ],
+  "global": false,
+  "inline": false,
+  "previewText": "category-card",
+  "supportedWidgetType": [
+    "oeAssignment6ShopByCategoryPedro"
+  ],
+  "tag": "category-card",
+  "translations": [
+    {
+      "language": "en_US",
+      "title": "Category Card",
+      "description": "Card of Shop by Category"
+    },
+    {
+      "language": "pt_BR",
+      "title": "Cartão de Categoria",
+      "description": "Cartao de Categoria de compras por categoria"
+    }
+  ],
+  "type": "fragment",
+  "version": 1
+}

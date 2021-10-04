@@ -1,0 +1,36 @@
+<!-- oeAssignment1OurBrandsPedroV2 -->
+<div id="oeAssignment1OurBrandsPedroV2">
+  <div class="container">
+    <h4>OUR <span>BRANDS</span></h4>
+  </div>
+  <div class="brands-container">
+    <div class="brand">
+      <img data-bind="ccResizeImage: {
+                source: '/file/general/centennial.png',
+                alt:'Centennial Logo',
+                errorSrc:'/file/general/nopic.jpg',
+                errorAlt:'No Image Found'}" />
+    </div>
+    <div class="brand">
+      <img data-bind="ccResizeImage: {
+                source: '/file/general/gbc.png',
+                alt:'GBC logo',
+                errorSrc:'/file/general/nopic.jpg',
+                errorAlt:'No Image Found'}" />
+    </div>
+    <div class="brand">
+      <img data-bind="ccResizeImage: {
+                source: '/file/general/greenball.png',
+                alt:'Greenball Logo',
+                errorSrc:'/file/general/nopic.jpg',
+                errorAlt:'No Image Found'}" />
+    </div>
+    <div class="brand">
+      <img data-bind="ccResizeImage: {
+                source: '/file/general/kanati.png',
+                alt:'Kanati Logo',
+                errorSrc:'/file/general/nopic.jpg',
+                errorAlt:'No Image Found'}" />
+    </div>
+  </div>
+</div>

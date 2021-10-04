@@ -1,0 +1,208 @@
+{
+    "widgetDescriptorName": "OE Hero Banner Pedro Franco",
+    "properties": [
+        {
+            "id": "carouselTimer",
+            "type": "stringType",
+            "helpTextResourceId": "carouselTimerHelpText",
+            "labelResourceId": "carouselTimerLabel",
+            "defaultValue": "8",
+            "required": true
+        },
+        {
+            "id": "hero1Image",
+            "type": "stringType",
+            "helpTextResourceId": "hero1ImageHelpText",
+            "labelResourceId": "hero1ImageLabel",
+            "defaultValue": "",
+            "required": true
+        },
+        {
+            "id": "textBox1",
+            "type": "stringType",
+            "helpTextResourceId": "textBox1HelpText",
+            "labelResourceId": "textBox1Label",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "hasCTA1",
+            "type": "booleanType",
+            "helpTextResourceId": "hasCTA1HelpText",
+            "labelResourceId": "hasCTA1Label",
+            "defaultValue": false
+        },
+        {
+            "id": "CTAText1",
+            "type": "stringType",
+            "helpTextResourceId": "CTAText1HelpText",
+            "labelResourceId": "CTAText1Label",
+            "defaultValue": "Click Here",
+            "required": false
+        },
+        {
+            "id": "CTALink1",
+            "type": "stringType",
+            "helpTextResourceId": "CTALink1HelpText",
+            "labelResourceId": "CTALink1Label",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "hero2Image",
+            "type": "stringType",
+            "helpTextResourceId": "hero2ImageHelpText",
+            "labelResourceId": "hero2ImageLabel",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "textBox2",
+            "type": "stringType",
+            "helpTextResourceId": "textBox2HelpText",
+            "labelResourceId": "textBox2Label",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "hasCTA2",
+            "type": "booleanType",
+            "helpTextResourceId": "hasCTA2HelpText",
+            "labelResourceId": "hasCTA2Label",
+            "defaultValue": false
+        },
+        {
+            "id": "CTAText2",
+            "type": "stringType",
+            "helpTextResourceId": "CTAText2HelpText",
+            "labelResourceId": "CTAText2Label",
+            "defaultValue": "Click Here",
+            "required": false
+        },
+        {
+            "id": "CTALink2",
+            "type": "stringType",
+            "helpTextResourceId": "CTALink2HelpText",
+            "labelResourceId": "CTALink2Label",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "hero3Image",
+            "type": "stringType",
+            "helpTextResourceId": "hero3ImageHelpText",
+            "labelResourceId": "hero3ImageLabel",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "textBox3",
+            "type": "stringType",
+            "helpTextResourceId": "textBox3HelpText",
+            "labelResourceId": "textBox3Label",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "hasCTA3",
+            "type": "booleanType",
+            "helpTextResourceId": "hasCTA3HelpText",
+            "labelResourceId": "hasCTA3Label",
+            "defaultValue": false
+        },
+        {
+            "id": "CTAText3",
+            "type": "stringType",
+            "helpTextResourceId": "CTAText3HelpText",
+            "labelResourceId": "CTAText3Label",
+            "defaultValue": "Click Here",
+            "required": false
+        },
+        {
+            "id": "CTALink3",
+            "type": "stringType",
+            "helpTextResourceId": "CTALink3HelpText",
+            "labelResourceId": "CTALink3Label",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "hero4Image",
+            "type": "stringType",
+            "helpTextResourceId": "hero4ImageHelpText",
+            "labelResourceId": "hero4ImageLabel",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "textBox4",
+            "type": "stringType",
+            "helpTextResourceId": "textBox4HelpText",
+            "labelResourceId": "textBox4Label",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "hasCTA4",
+            "type": "booleanType",
+            "helpTextResourceId": "hasCTA4HelpText",
+            "labelResourceId": "hasCTA4Label",
+            "defaultValue": false
+        },
+        {
+            "id": "CTAText4",
+            "type": "stringType",
+            "helpTextResourceId": "CTAText4HelpText",
+            "labelResourceId": "CTAText4Label",
+            "defaultValue": "Click Here",
+            "required": false
+        },
+        {
+            "id": "CTALink4",
+            "type": "stringType",
+            "helpTextResourceId": "CTALink4HelpText",
+            "labelResourceId": "CTALink4Label",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "hero5Image",
+            "type": "stringType",
+            "helpTextResourceId": "hero5ImageHelpText",
+            "labelResourceId": "hero5ImageLabel",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "textBox5",
+            "type": "stringType",
+            "helpTextResourceId": "textBox5HelpText",
+            "labelResourceId": "textBox5Label",
+            "defaultValue": "",
+            "required": false
+        },
+        {
+            "id": "hasCTA5",
+            "type": "booleanType",
+            "helpTextResourceId": "hasCTA5HelpText",
+            "labelResourceId": "hasCTA5Label",
+            "defaultValue": false
+        },
+        {
+            "id": "CTAText5",
+            "type": "stringType",
+            "helpTextResourceId": "CTAText5HelpText",
+            "labelResourceId": "CTAText5Label",
+            "defaultValue": "Click Here",
+            "required": false
+        },
+        {
+            "id": "CTALink5",
+            "type": "stringType",
+            "helpTextResourceId": "CTALink5HelpText",
+            "labelResourceId": "CTALink5Label",
+            "defaultValue": "",
+            "required": false
+        }
+    ]
+}

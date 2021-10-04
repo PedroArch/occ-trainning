@@ -1,0 +1,10 @@
+{
+  "resources": {
+    "brandsPickedHelpText": "Choose the brands to appear in the storefront",
+    "brandsPickedLabel": "Choose the Brands",
+    "pedroCentenialLabel": "Centenial",
+    "pedroGbcLabel": "GBC",
+    "pedroGreenballLabel": "Greenball",
+    "pedroKanatiLabel": "Kanati"
+  }
+}

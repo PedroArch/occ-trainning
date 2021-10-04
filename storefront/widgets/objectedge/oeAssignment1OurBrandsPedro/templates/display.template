@@ -1,0 +1,20 @@
+<!-- oeAssignment1OurBrandsPedro -->
+<div id="oeAssignment1OurBrandsPedro">
+  <div class="container">
+    <h2>OUR <span>BRANDS</span></h2>
+  </div>
+  <div class="brands-container">
+    <div class="brand">
+      <img data-bind="image: { src: '/file/general/logo-panda.png', alt: 'Panda Express Logo', title='logo-panda'}"/>
+    </div>
+    <div class="brand">
+      <img data-bind="image: { src: '/file/general/logo-starbucks.png', alt: 'Starbucks Logo', title='logo-starbucks'}"/>
+    </div>
+    <div class="brand">
+      <img data-bind="image: { src: '/file/general/logo-eagle.png', alt: 'Eagle Logo', title='logo-eagle'}"/>
+    </div>
+    <div class="brand">
+      <img data-bind="image: { src: '/file/general/logo-animalplanet.png', alt: 'Animal Planet Logo', title='logo-animalplanet'}"/>
+    </div>
+  </div>
+</div>

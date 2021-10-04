@@ -1,0 +1,30 @@
+{
+  "name": "curencyConverter",
+  "version": "0.0.1",
+  "private": true,
+  "main": "app/index.js",
+  "authenticatedUrls": [],
+  "publicUrls": [
+    "/ccstorex/custom/curencyConverter"
+  ],
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "jasmine tests/*Test.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "~4.15.5",
+    "nconf": "^0.10.0",
+    "node-fetch": "^2.6.1",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-sinon": "^2.8.1",
+    "jasmine": "^2.9.0",
+    "sinon": "^4.2.1"
+  },
+  "allowedUrls": [
+    "https://free.currconv.com"
+  ]
+}

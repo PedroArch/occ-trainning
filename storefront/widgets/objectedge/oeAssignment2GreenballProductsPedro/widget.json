@@ -1,0 +1,13 @@
+{
+  "name": "oeAssignment2GreenballProductsPedro",
+  "widgetType": "oeAssignment2GreenballProductsPedro",
+  "i18nresources": "oeAssignment2GreenballProductsPedro",
+  "javascript": "oeAssignment2GreenballProductsPedro",
+  "availableToAllPages": true,
+  "global": false,
+  "globalEnabled": false,
+  "version": 1,
+  "jsEditable": true,
+  "imports": [],
+  "config": {}
+}

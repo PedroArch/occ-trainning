@@ -1,0 +1,18 @@
+<!-- oeAssignment4OurBrandsPedro -->
+<div id="oeAssignment4OurBrandsPedro">
+  <div class="container">
+    <h4>OUR <span>BRANDS</span></h4>
+  </div>
+  <div class="brands-container" data-bind="foreach: brands">
+    <div class="brand" data-bind="click: goToPage.bind($data, url)">
+      <img data-bind="ccResizeImage: {
+                source: image,
+                alt: title,
+                errorSrc:'/file/general/nopic.jpg',
+                errorAlt:'No Image Found'}" />
+      <div class="overlay" >
+        <span class="brand-title" data-bind="text: title">No Title</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+{
+  "name": "oeAssignment3ShopByCategoryPedro",
+  "widgetType": "oeAssignment3ShopByCategoryPedro",
+  "i18nresources": "oeAssignment3ShopByCategoryPedro",
+  "javascript": "oeAssignment3ShopByCategoryPedro",
+  "availableToAllPages": true,
+  "global": false,
+  "globalEnabled": false,
+  "version": 1,
+  "jsEditable": true,
+  "imports": [],
+  "config": {}
+}

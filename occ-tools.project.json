@@ -3,15 +3,15 @@
   "environments": [
     {
       "name": "dev",
-      "url": "https://ccadmin-z93a.oracleoutsourcing.com"
+      "url": "https://asbx50c1dev-admin.occa.ocs.oraclecloud.com/"
     },
     {
       "name": "dev-store",
-      "url": "https://ccstore-z93a.oracleoutsourcing.com"
+      "url": "https://asbx50c1dev-store.occa.ocs.oraclecloud.com/"
     }
   ],
   "theme": {
-    "id": "100001",
-    "name": "Training Theme"
+    "id": "cloudLakeTheme",
+    "name": "Cloud Lake Theme"
   }
 }

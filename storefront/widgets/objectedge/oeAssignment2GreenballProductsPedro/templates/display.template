@@ -1,0 +1,31 @@
+<!-- oeES6Widget -->
+<div id="oeES6Widget">
+
+    <div class="header">
+      
+      <div class="logo">
+        <b>GREENBALL</b>
+        <br>
+        <span>PRODUCTS</span>
+      </div>
+      
+      <div class="separator"></div>
+      
+      <div class="description">
+        For over forty years we've dedicated ourselves to meeting our customer's needs and demands. By offering
+        a wide selection of tire products accompainied with efficient and friendly service, Greenball has proven to be a reliable business partner for
+        customers at the retail, wholesale and OEM levels.
+      </div>
+
+    </div>
+
+    <div
+      class="productsWrapper"
+      data-bind="foreach: productsList">
+      <div class="bgImage" 
+          data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }, click: goToPage.bind($data, url)">
+        <span data-bind="text: title">No Product</span>
+      </div>
+    </div>
+  
+</div>

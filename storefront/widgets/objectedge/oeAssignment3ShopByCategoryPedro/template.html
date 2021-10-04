@@ -1,0 +1,17 @@
+<!-- oeES6Widget -->
+<div id="oeES6Widget">
+  <div class="containter">
+    <h2>Shob By Category</h2>
+    <div class="categories">
+      <div class="category" data-bind="foreach: categoriesList">
+        <img data-bind="ccResizeImage: {
+          source: 'img',
+          alt:'title',
+          errorSrc:'/file/general/nopic.jpg',
+          errorAlt:'No Image Found'}"
+        />
+        <span data-bind="text: title">No Category</span>
+      </div>
+    </div>
+  </div>
+</div>

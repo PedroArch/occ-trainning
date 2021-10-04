@@ -1,0 +1,17 @@
+<!-- oeES6Widget -->
+<div id="oeES6Widget">
+  <div class="container">
+    <h2>Shop By Category</h2>
+    <div class="categories" data-bind="foreach: categoriesList">
+      <div class="category" data-bind="click: goToPage.bind($data, url)">
+        <img data-bind="ccResizeImage: {
+          source: img,
+          alt: title,
+          errorSrc:'/file/general/nopic.jpg',
+          errorAlt:'No Image Found'}"
+        />
+        <span data-bind="text: title">No Category</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+{
+  "name": "oeAssignment1OurBrandsPedro",
+  "widgetType": "oeAssignment1OurBrandsPedro",
+  "i18nresources": "oeAssignment1OurBrandsPedro",
+  "javascript": "oeAssignment1OurBrandsPedro",
+  "availableToAllPages": true,
+  "global": false,
+  "globalEnabled": false,
+  "version": 1,
+  "jsEditable": true,
+  "imports": [],
+  "config": {}
+}

@@ -1,0 +1,105 @@
+/* ---------------------------------------------------------------------- */
+/*  OE Generic Widget Styles
+/* ---------------------------------------------------------------------- */
+#oeES6Widget {
+  background: rgb(245,245,245);
+  background: linear-gradient(180deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 100%);
+  color: #000;
+  padding: 100px 0 5px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @keyframes zoomBg {
+    from {background-size: 105%}
+    to {background-size: 130%}
+  }
+
+  .header {
+    width: 70%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .separator {
+      background: #e7e7e7;
+      width: 3px;
+      height: 70px;
+      margin-right: 20px;
+    }
+    
+    .description {
+      height: 60px;
+      font-size: 12px;
+      margin-right: 20px;
+      margin-bottom: 5px;
+      line-height: 20px;
+    }
+    
+    .logo {
+      height: 70px;
+      padding-top: 5px;
+      margin-right: 20px;
+    
+      b {
+        font-size: 26px;
+        margin-top: 5px;
+        font-weight: 800;
+      }
+      
+      span {
+        font-size: 26px;
+        font-weight: lighter;
+      }
+    }
+  }
+
+  .productsWrapper {
+    width: 100%;
+
+    margin-top: 70px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0, 0;
+
+    .bgImage {
+      cursor: pointer;
+
+      height: 200px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 105%;
+
+      color: #FFF;
+      font-weight: bold;
+
+      &:hover {            
+        animation-name: zoomBg;
+        animation-duration: 0.7s;
+        background-size: 130%
+      } 
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(to right, black, transparent, transparent);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

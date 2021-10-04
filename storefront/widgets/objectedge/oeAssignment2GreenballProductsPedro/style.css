@@ -1,0 +1,48 @@
+/* ---------------------------------------------------------------------- */
+/*  OE Generic Widget Styles
+/* ---------------------------------------------------------------------- */
+#oeES6Widget {
+  background: rgb(245,245,245);
+  background: linear-gradient(180deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 100%);
+  color: #000;
+  padding: 50px 0 50px 0;
+}
+.header {
+    width: 60%;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator {
+  background: #d4d4d4;
+  width: 2px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+.description {
+  height: 70px;
+  font-size: 18px;
+  margin-right: 20px;
+  line-height: 20px;
+}
+
+.logo {
+  height: 70px;
+  margin-right: 20px;
+}
+
+
+b {
+  font-size: 32px;
+}
+
+span {
+  font-size: 32px;
+}
+

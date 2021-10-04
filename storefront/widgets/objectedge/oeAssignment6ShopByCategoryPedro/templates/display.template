@@ -1,0 +1,7 @@
+<!-- oeES6Widget -->
+<section id="shop-by-category-section">
+    <h3 class="shop-by-category-title" data-bind="widgetLocaleText:'title'"></h3>
+    <div class="categories-row">
+        <div class="category-col" data-bind="element: 'category-card'"></div>
+    </div>
+</section>

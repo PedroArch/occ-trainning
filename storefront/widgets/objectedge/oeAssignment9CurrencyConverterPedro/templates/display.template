@@ -1,0 +1,31 @@
+<!-- oeAssignment9CurrencyConverterPedro -->
+<div id="oeAssignment9CurrencyConverterPedro">
+  <div class="converter-widget-wrapper">
+    <h2>Currency Converter V1</h2>
+    <div class="select-row">
+      <div class="converter-select-amount">
+        <lable class="input-number-label" for="number-input">Amount</lable>
+        <input id="number-input"type="number" value="0" data-bind="event:{ change: $data.onLoad.getNewCurrency}" /> 
+      </div>
+      <div class="converter-select-current">
+        <lable class="input-current-label" for="current-select">Current</lable>
+        <select name="current-select" id="current-select" data-bind="event:{ change: $data.getNewCurrency}">
+          <option value="USD" selected>USD</option>
+          <option value="AUD">Australian Dollar</option>
+          <option value="EUR">Euro</option>
+        </select>
+      </div>
+      <div class="converter-select-new">
+        <lable class="input-current-label" for="new-select">New</lable>
+        <select name="current-select" id="new-select" data-bind="event:{ change: $data.getNewCurrency}">
+          <option value="USD">USD</option>
+          <option value="AUD">Australian Dollar</option>
+          <option value="EUR" selected>Euro</option>
+        </select>
+      </div>
+    </div>
+    <div class="currency-convert-result">
+      <h3 class="result" data-bind="text: $data.result">0</h3>
+    </div>
+  </div>
+</div>
